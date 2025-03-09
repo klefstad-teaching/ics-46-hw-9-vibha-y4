@@ -26,6 +26,9 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
     return dist[str1.length()][str2.length()] <= d;
 }
 
+bool is_adjacent(const string& word1, const string& word2){
+    return edit_distance_within(word1, word2, 1);
+}
 
 #define my_assert(e) {cout << #e << ((e) ? " passed": " failed") << endl;}
 
