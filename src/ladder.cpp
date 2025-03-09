@@ -81,7 +81,6 @@ void load_words(set<string>& word_list, const string& file_name){
     }
     string word;
     while (file >> word){
-        //transform(word.begin(), word.end(), word.begin(), ::tolower);
         word_list.insert(word);
     }
     file.close();
