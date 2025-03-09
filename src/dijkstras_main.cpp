@@ -1,6 +1,7 @@
 #include "dijkstras.h"
 
 int main(){
+    Graph G;
     string filename = "src/small.txt";
     file_to_graph(filename, G);
     vector<int> previous;
