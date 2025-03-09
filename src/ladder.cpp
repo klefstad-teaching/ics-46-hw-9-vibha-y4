@@ -6,7 +6,7 @@ void error(string word1, string word2, string msg) {
 }
 
 bool edit_distance_within(const std::string& str1, const std::string& str2, int d){
-    if (abs((size_t)str1.length() - (size_t)str2.length()) > d){
+    if (abs((int)str1.length() - (int)str2.length()) > d){
         return false;
     }
     
@@ -25,7 +25,7 @@ bool edit_distance_within(const std::string& str1, const std::string& str2, int 
             }
         }
     }
-    return dist[str1.length()][str2.length()] <= d;
+    return dist[str1.length()][str2.length()] <= static_cast<size_t>(d);
 }
 
 bool is_adjacent(const string& word1, const string& word2){
